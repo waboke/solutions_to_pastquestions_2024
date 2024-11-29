@@ -3,6 +3,6 @@
 
 <ol>
 <li>William Rupert Waboke</li>
-<li>Abubakar Abdulkadir Hassan U22CS1060</li>
+<li>Abubakar Abdulkadir Hassan aeehassan U22CS1060</li>
 
 </ol>
