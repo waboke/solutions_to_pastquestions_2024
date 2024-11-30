@@ -3,6 +3,10 @@
 
 <ol>
 <li>William Rupert Waboke</li>
-<li>Abubakar Abdulkadir Hassan @aeehassan U22CS1060</li>
+<li>
+  Name: Abubakar Abdulkadir Hassan 
+  Username: @aeehassan 
+  Matric no.: U22CS1060
+</li>
 
 </ol>
