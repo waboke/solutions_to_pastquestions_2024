@@ -16,5 +16,6 @@ int main()
     obj.question6A();
     obj.question6B();
     obj.question7A();
+    obj.question7B();
     return 0;
 }
