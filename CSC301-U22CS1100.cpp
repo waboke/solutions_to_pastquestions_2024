@@ -5,7 +5,6 @@ using namespace std;
 // Class for Question 2a: Prime Number Check
 class PrimeCheck {
 public:
-    // Function to check if a number is prime
     void isPrime() {
         int num;
         cout << "Enter a number to check if it's prime: ";
@@ -31,7 +30,6 @@ public:
 // Class for Question 2b: Sum of Array Elements
 class SumArray {
 public:
-    // Function to calculate the sum of elements in an array
     void calculateSum() {
         int n, sum = 0;
         cout << "Enter the number of elements in the array: ";
@@ -50,7 +48,6 @@ public:
 // Class for Question 3a: Bubble Sort
 class BubbleSort {
 public:
-    // Function to sort an array using bubble sort
     void bubblesort() {
         int n;
         cout << "Enter the number of elements to be stored in the array: ";
@@ -78,7 +75,6 @@ public:
 // Class for Question 3b: Calculate Sum and Average of 10 Numbers
 class SumAndAverage {
 public:
-    // Function to calculate sum and average of 10 numbers
     void calculate() {
         int numbers[10], sum = 0;
         float average;
@@ -97,7 +93,6 @@ public:
 // Class for Question 4a: String Length
 class StringLength {
 public:
-    // Function to calculate the length of a string
     void strLength() {
         char str[50];
         cout << "Enter a string: ";
@@ -114,7 +109,6 @@ public:
 // Class for Question 4b: Linear Search
 class LinearSearch {
 public:
-    // Function to perform linear search in an array
     void linearSearch() {
         int n, target;
         cout << "Enter the number of elements in the array: ";
@@ -141,25 +135,26 @@ public:
     }
 };
 
-// Class for Question 5a: Add Two Numbers
+// Class for Question 5a: Add Two Numbers Using Pointers
 class AddNumbers {
 public:
-    // Function to add two numbers
-    void addNumbers() {
+    int* addNumbers() {
         int num1, num2;
-        cout << "Input the first number: ";
+        cout << "Enter the first number: ";
         cin >> num1;
-        cout << "Input the second number: ";
+        cout << "Enter the second number: ";
         cin >> num2;
-        cout << "The sum of the entered numbers is: " << num1 + num2 << endl;
+
+        int* result = new int;
+        *result = num1 + num2;
+        return result;
     }
 };
 
 // Class for Question 5b: Palindrome Check
 class PalindromeCheck {
 public:
-    // Function to check if a number is a palindrome
-    void isPalindrome() {
+    bool isPalindrome() {
         int num, original, reversed = 0, remainder;
         cout << "Enter a number to check if it's a palindrome: ";
         cin >> num;
@@ -169,18 +164,13 @@ public:
             reversed = reversed * 10 + remainder;
             num /= 10;
         }
-        if (original == reversed) {
-            cout << original << " is a palindrome number." << endl;
-        } else {
-            cout << original << " is not a palindrome number." << endl;
-        }
+        return original == reversed; // Return true if original equals reversed
     }
 };
 
 // Class for Question 6a: Average Marks of Students
 class StudentAverage {
 public:
-    // Function to compute the average marks of two students
     void computeAverage() {
         struct Student {
             string name;
@@ -212,7 +202,6 @@ public:
 // Class for Question 6b: Number Properties
 class NumberProperties {
 public:
-    // Function to check number sign and parity
     void checkProperties() {
         int num;
         cout << "Input a number (integer): ";
@@ -230,7 +219,6 @@ public:
 // Class for Question 7a: Factorial Calculation
 class Factorial {
 public:
-    // Function to calculate the factorial of a number
     void factorial() {
         int n;
         cout << "Enter a number to find its factorial: ";
@@ -250,11 +238,22 @@ public:
 // Class for Question 7b: Display Personal Information
 class PersonalInfo {
 public:
-    // Function to display personal information
     void display() {
-        cout << "Name: Omale Joseph\n";
-        cout << "DOB: July 14, 1975\n";
-        cout << "Mobile: 07012345678\n";
+        string name, DOB;
+        int phoneNumber;
+    
+        cout << "Enter your Name: ";
+        cin >> name;
+    
+        cout << "Enter your Date of Birth: ";
+        cin >> DOB;
+    
+        cout << "Enter your Phone Number: ";
+        cin >> phoneNumber;
+    
+        cout << name << endl;
+        cout << DOB << endl;
+        cout << phoneNumber << endl;
     }
 };
 
@@ -266,8 +265,19 @@ int main() {
     SumAndAverage().calculate();
     StringLength().strLength();
     LinearSearch().linearSearch();
-    AddNumbers().addNumbers();
-    PalindromeCheck().isPalindrome();
+
+    AddNumbers addNumbers;
+    int* sum = addNumbers.addNumbers();
+    cout << "The sum of the two numbers is: " << *sum << endl;
+    delete sum;
+
+    PalindromeCheck palindromeChecker;
+    if (palindromeChecker.isPalindrome()) {
+        cout << "The number is a palindrome." << endl;
+    } else {
+        cout << "The number is not a palindrome." << endl;
+    }
+
     StudentAverage().computeAverage();
     NumberProperties().checkProperties();
     Factorial().factorial();
