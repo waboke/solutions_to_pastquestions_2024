@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+void checkNumber(int num) {
+    if (num == 0) {
+        cout << "The number is Zero.\n";
+    } else {
+        string sign = (num > 0) ? "positive" : "negative";
+        string parity = (num % 2 == 0) ? "even" : "odd";
+        cout << "Number is " << sign << "-" << parity << ".\n";
+    }
+}
+
+int main() {
+    int num;
+    cout << "Input a number (integer): ";
+    cin >> num;
+
+    checkNumber(num);
+    return 0;
+}
