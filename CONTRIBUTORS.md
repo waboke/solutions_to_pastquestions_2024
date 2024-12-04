@@ -1,7 +1,7 @@
 # CONTRIBUTORS.
-## Contributors should add thier names, github username and matric number here.
-
 <ol>
-<li>William Rupert Waboke
+<li>OASIS BEN AKPATA
+<li>OasisBen
+<li>U22CS1033
 
 </ol>
