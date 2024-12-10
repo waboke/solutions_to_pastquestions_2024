@@ -3,6 +3,9 @@
 # NAME - Samuel Joseph Chimdindu
 # GITHUB USERNAME - Sjay2468
 # MATRIC NO - U22CS1109
+# NAME - Daboer Jordan An'ame
+# GITHUB USERNAME - daboerjordan
+# MATRIC NO. - U22CS1038
 <ol>
 <li>William Rupert Waboke
 
